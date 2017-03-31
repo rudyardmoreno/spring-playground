@@ -13,6 +13,6 @@ import java.sql.Date;
 public class HelloController {
     @GetMapping("/")
     public String helloWorld() {
-        return "Hello from Spring!!!.rrrruuuu";
+        return "Hello from Spring!!!";
     }
 }
