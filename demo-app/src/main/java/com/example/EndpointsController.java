@@ -5,16 +5,12 @@ package com.example;
  */
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Date;
-
 @RestController
-public class HelloController {
-    @RequestMapping("/hello")
+public class EndpointsController {
+    @GetMapping("/EndPointController")
     public String helloWorld() {
-        return "Hello from Spring";
+        return "This is Endpoints Controller!";
     }
 }
