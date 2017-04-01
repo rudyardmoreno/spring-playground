@@ -55,4 +55,10 @@ import java.util.Set;
         //Return text result
         return  txtResult;
     }
+
+    // Spring Math: Calculate volume
+    public static String getVolume(Volume volume){
+        return volume.getVolume();
+    }
+
 }

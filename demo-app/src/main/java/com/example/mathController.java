@@ -10,6 +10,7 @@ package com.example;
 
 import com.example.model.MathService;
 import com.example.model.Calculate;
+import com.example.model.Volume;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,4 +35,9 @@ public class mathController {
         return MathService.getSum(querystring);
     }
 
+    // Spring Math: Sum with Querystrings
+    @RequestMapping("/volume/{length}/{width}/{height}")
+    public String volume(Volume volume) {
+        return MathService.getVolume(volume);
+    }
 }
