@@ -9,32 +9,29 @@ package com.example;
  */
 
 import com.example.model.MathService;
+import com.example.model.Calculate;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/math")
 public class mathController {
-    MathService mathService = new MathService();
 
-    // Spring Math: PI with GET
     @GetMapping("/pi")
-    public String helloWorld() {
-        return mathService.getPI();
+    public String getPI() {
+        return MathService.getPI();
     }
 
     // Spring Math: Calculate with Querystrings
     @GetMapping("/calculate")
-    public String calculate(@RequestParam(value = "operation", defaultValue = "add") String operation,
-                            @RequestParam int x,
-                            @RequestParam int y) {
-        return mathService.getCalculate(operation,x,y);
+    public String calculate(Calculate calculate) {
+        return MathService.getCalculate(calculate);
     }
 
     // Spring Math: Sum with Querystrings
     @PostMapping("/sum")
     public String sum(@RequestParam MultiValueMap<String, String> querystring) {
-        return mathService.getSum(querystring);
+        return MathService.getSum(querystring);
     }
 
 }
