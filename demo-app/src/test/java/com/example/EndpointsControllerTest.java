@@ -12,6 +12,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/*
+ * Created by Rudyard Moreno on 3/30/17
+ * DISH NETWORK - Galvanize Training
+ * CNE-002 (Dish)
+ * Test Endpoints Controller
+ */
+
 @RunWith(SpringRunner.class)
 @WebMvcTest(EndpointsController.class)
 

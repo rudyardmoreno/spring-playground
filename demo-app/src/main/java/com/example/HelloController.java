@@ -1,7 +1,10 @@
 package com.example;
 
-/**
- * Created by trainer18 on 3/30/17.
+/*
+ * Created by Rudyard Moreno on 3/30/17
+ * DISH NETWORK - Galvanize Training
+ * CNE-002 (Dish)
+ * Hello Controller
  */
 
 import org.springframework.web.bind.annotation.RequestMapping;

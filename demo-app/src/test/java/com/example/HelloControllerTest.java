@@ -8,10 +8,16 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+/*
+ * Created by Rudyard Moreno on 3/30/17
+ * DISH NETWORK - Galvanize Training
+ * CNE-002 (Dish)
+ * Test Hello Controller
+ */
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(HelloController.class)
