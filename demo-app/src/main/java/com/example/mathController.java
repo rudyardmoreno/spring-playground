@@ -8,9 +8,11 @@ package com.example;
  * Math Controller
  */
 
-import com.example.model.MathService;
+import com.example.model.Area;
 import com.example.model.Calculate;
+import com.example.model.MathService;
 import com.example.model.Volume;
+import org.springframework.http.MediaType;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,9 +37,15 @@ public class mathController {
         return MathService.getSum(querystring);
     }
 
-    // Spring Math: Sum with Querystrings
+    // Spring Math: Calculate Volume
     @RequestMapping("/volume/{length}/{width}/{height}")
     public String volume(Volume volume) {
         return MathService.getVolume(volume);
+    }
+
+    // Spring Math: Calculate Area for a Rectangle or Circle
+    @PostMapping(value="/area", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public String area(Area area) {
+        return MathService.getArea(area);
     }
 }

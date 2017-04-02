@@ -13,8 +13,12 @@ import java.util.Set;
 
  public class MathService {
     // Spring Math: PI with GET
+    public static double getPIValue(){
+        return 3.141592653589793;
+    }
+
     public static String getPI(){
-        return "3.141592653589793";
+        return String.format("%.15f",getPIValue());
     }
 
     // Spring Math: Calculate with Querystrings
@@ -61,4 +65,8 @@ import java.util.Set;
         return volume.getVolume();
     }
 
+    // Spring Math: Calculate area
+    public static String getArea(Area area){
+        return area.getArea();
+    }
 }
