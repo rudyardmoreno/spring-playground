@@ -7,16 +7,18 @@ package com.example;
  * JSON Controller
  */
 
-import com.example.model.Flight;
-import com.example.model.Passenger;
-import com.example.model.Ticket;
+import com.example.model.*;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 @RestController
 public class JSONController {
@@ -60,5 +62,18 @@ public class JSONController {
         flights.add(flight2);
 
         return flights;
+    }
+
+    @PostMapping("/flights/tickets/total")
+    public Result getTicketsTotal(@RequestBody Tickets tickets) throws Exception {
+        Result result = new Result();
+        int totalResult=0;
+
+        for (Ticket2 ticket : tickets.getTickets()) {
+            totalResult+=ticket.getPrice();
+        }
+
+        result.setResult(totalResult);
+        return result;
     }
 }
