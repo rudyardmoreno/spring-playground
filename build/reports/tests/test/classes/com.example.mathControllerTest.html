@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.069s</div>
+<div class="counter">0.040s</div>
 <p>duration</p>
 </div>
 </td>
@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td class="success">testCalculateDivideByZeroOperation</td>
-<td>0.033s</td>
+<td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -109,7 +109,7 @@
 </tr>
 <tr>
 <td class="success">testCalculateMultiplyOperation</td>
-<td>0.004s</td>
+<td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@
 </tr>
 <tr>
 <td class="success">testVolumePatch</td>
-<td>0.004s</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -147,12 +147,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2017-04-06 17:19:23.285  INFO 16995 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.mathControllerTest], using SpringBootContextLoader
-2017-04-06 17:19:23.286  INFO 16995 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.mathControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2017-04-06 17:19:23.286  INFO 16995 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.mathControllerTest]: mathControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2017-04-06 17:19:23.296  INFO 16995 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.mathControllerTest
-2017-04-06 17:19:23.298  INFO 16995 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-04-06 17:19:23.300  INFO 16995 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f14e1c6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@88afbb9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2cd29fd0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@223c79e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5a5eb6b8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d6d979, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3d42fa0c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7c703775, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5334b535, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@601ab33b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4aa2b7ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3714ea10]
+<pre>2017-04-09 09:46:08.755  INFO 4375 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.mathControllerTest], using SpringBootContextLoader
+2017-04-09 09:46:08.755  INFO 4375 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.mathControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-09 09:46:08.755  INFO 4375 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.mathControllerTest]: mathControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-04-09 09:46:08.765  INFO 4375 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.mathControllerTest
+2017-04-09 09:46:08.768  INFO 4375 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-09 09:46:08.770  INFO 4375 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@73696baa, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2121672a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a6d9bf8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e573e05, org.springframework.test.context.transaction.TransactionalTestExecutionListener@265b325e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c691988, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@a5df1a6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d5d51fe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@526b5fc9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@168ab955, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@733fbae3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@342ad7db]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -162,24 +162,24 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.2.RELEASE)
 
-2017-04-06 17:19:33.334  INFO 16995 --- [    Test worker] com.example.mathControllerTest           : Starting mathControllerTest on trainer18s-MacBook-Pro.local with PID 16995 (started by trainer18 in /Users/trainer18/Documents/git/spring-playground)
-2017-04-06 17:19:33.335  INFO 16995 --- [    Test worker] com.example.mathControllerTest           : No active profile set, falling back to default profiles: default
-2017-04-06 17:19:33.338  INFO 16995 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e6e827e: startup date [Thu Apr 06 17:19:33 MDT 2017]; root of context hierarchy
-2017-04-06 17:19:33.586  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1e6e827e: startup date [Thu Apr 06 17:19:33 MDT 2017]; root of context hierarchy
-2017-04-06 17:19:33.596  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/sum],methods=[POST]}&quot; onto public java.lang.String com.example.mathController.sum(org.springframework.util.MultiValueMap&lt;java.lang.String, java.lang.String&gt;)
-2017-04-06 17:19:33.596  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/pi],methods=[GET]}&quot; onto public java.lang.String com.example.mathController.getPI()
-2017-04-06 17:19:33.597  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/calculate],methods=[GET]}&quot; onto public java.lang.String com.example.mathController.calculate(com.example.model.Calculate)
-2017-04-06 17:19:33.597  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/volume/{length}/{width}/{height}]}&quot; onto public java.lang.String com.example.mathController.volume(com.example.model.Volume)
-2017-04-06 17:19:33.597  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/area],methods=[POST],consumes=[application/x-www-form-urlencoded]}&quot; onto public java.lang.String com.example.mathController.area(com.example.model.Area)
-2017-04-06 17:19:33.599  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-04-06 17:19:33.599  INFO 16995 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-04-06 17:19:33.614  INFO 16995 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-04-06 17:19:33.614  INFO 16995 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-04-06 17:19:33.636  INFO 16995 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-04-06 17:19:33.679  INFO 16995 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
-2017-04-06 17:19:33.679  INFO 16995 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
-2017-04-06 17:19:33.686  INFO 16995 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 6 ms
-2017-04-06 17:19:33.722  INFO 16995 --- [    Test worker] com.example.mathControllerTest           : Started mathControllerTest in 10.418 seconds (JVM running for 66.823)
+2017-04-09 09:46:18.837  INFO 4375 --- [    Test worker] com.example.mathControllerTest           : Starting mathControllerTest on trainer18s-MacBook-Pro.local with PID 4375 (started by trainer18 in /Users/trainer18/Documents/git/spring-playground)
+2017-04-09 09:46:18.838  INFO 4375 --- [    Test worker] com.example.mathControllerTest           : No active profile set, falling back to default profiles: default
+2017-04-09 09:46:18.841  INFO 4375 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79046d69: startup date [Sun Apr 09 09:46:18 MDT 2017]; root of context hierarchy
+2017-04-09 09:46:19.093  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@79046d69: startup date [Sun Apr 09 09:46:18 MDT 2017]; root of context hierarchy
+2017-04-09 09:46:19.103  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/sum],methods=[POST]}&quot; onto public java.lang.String com.example.mathController.sum(org.springframework.util.MultiValueMap&lt;java.lang.String, java.lang.String&gt;)
+2017-04-09 09:46:19.104  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/pi],methods=[GET]}&quot; onto public java.lang.String com.example.mathController.getPI()
+2017-04-09 09:46:19.104  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/calculate],methods=[GET]}&quot; onto public java.lang.String com.example.mathController.calculate(com.example.model.Calculate)
+2017-04-09 09:46:19.104  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/volume/{length}/{width}/{height}]}&quot; onto public java.lang.String com.example.mathController.volume(com.example.model.Volume)
+2017-04-09 09:46:19.105  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/area],methods=[POST],consumes=[application/x-www-form-urlencoded]}&quot; onto public java.lang.String com.example.mathController.area(com.example.model.Area)
+2017-04-09 09:46:19.108  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-04-09 09:46:19.108  INFO 4375 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-09 09:46:19.124  INFO 4375 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 09:46:19.124  INFO 4375 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 09:46:19.144  INFO 4375 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 09:46:19.190  INFO 4375 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2017-04-09 09:46:19.190  INFO 4375 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2017-04-09 09:46:19.196  INFO 4375 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 6 ms
+2017-04-09 09:46:19.256  INFO 4375 --- [    Test worker] com.example.mathControllerTest           : Started mathControllerTest in 10.482 seconds (JVM running for 66.786)
 Key = n
 Values = [4, 5, 6]n
 </pre>
@@ -193,7 +193,7 @@ Values = [4, 5, 6]n
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.4.1</a> at Apr 6, 2017 5:19:38 PM</p>
+<a href="http://www.gradle.org">Gradle 3.4.1</a> at Apr 9, 2017 9:46:24 AM</p>
 </div>
 </div>
 </body>
