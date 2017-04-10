@@ -1,5 +1,7 @@
 package com.example.model;
 
+import com.example.model.data.entities.User;
+
 /**
  * Created by Rudyard Moreno on 04/03/2017
  * DISH NETWORK - Galvanize Training
