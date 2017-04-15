@@ -1,7 +1,6 @@
 package com.example.model;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,18 +12,25 @@ import java.util.Map;
  * Unit 6 - Spring IoC and Config
  * WordCounter class
  */
-@Configuration
+@Service
 public class WordCounter {
     private String words;
 
+    WordCountConfig wordCountConfig;
+
+    public WordCounter(WordCountConfig value) {
+        wordCountConfig=value;
+        setWords("");
+    }
+
     public String getWords(){ return words; }
+
     public void setWords(String value) { words=value; }
 
-    @Bean
     public Map<String,Integer> count(String words) {
         Map<String,Integer> wordCount = new HashMap<>();
         int cnt=0;
-        for (String word : words.split(" ")) {
+        for (String word : words.split(wordCountConfig.getDelimiter())) {
             if (!wordCount.containsKey(word)) {
                 wordCount.put(word,1);
             } else {
@@ -35,7 +41,4 @@ public class WordCounter {
         return wordCount;
     }
 
-    public WordCounter() {
-        setWords("");
-    }
 }
