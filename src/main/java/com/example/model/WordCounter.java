@@ -30,12 +30,20 @@ public class WordCounter {
     public Map<String,Integer> count(String words) {
         Map<String,Integer> wordCount = new HashMap<>();
         int cnt=0;
+        String wordTmp="";
         for (String word : words.split(wordCountConfig.getDelimiter())) {
-            if (!wordCount.containsKey(word)) {
-                wordCount.put(word,1);
+            if (!wordCountConfig.isCaseSensitive()) {
+                wordTmp=word.toLowerCase();
             } else {
-                wordCount.put(word,wordCount.get(word)+1);
+                wordTmp=word;
+            }
+            if (!wordCountConfig.getWords().getSkip().contains(wordTmp)) {
+                if (!wordCount.containsKey(wordTmp)) {
+                    wordCount.put(wordTmp, 1);
+                } else {
+                    wordCount.put(word, wordCount.get(wordTmp) + 1);
 
+                }
             }
         }
         return wordCount;

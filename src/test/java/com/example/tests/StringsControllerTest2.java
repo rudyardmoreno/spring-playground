@@ -20,7 +20,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.hamcrest.Matchers.is;
@@ -49,9 +51,9 @@ public class StringsControllerTest2 {
 
     @Before
     public void test1Setup(){
-        request ="to the moon to the moon to the moon";
+        request ="To The MOON to the moon to the moon";
         response.put("to",3);
-        response.put("the",3);
+        //response.put("the",3);
         response.put("moon",3);
     }
 
@@ -62,7 +64,15 @@ public class StringsControllerTest2 {
 
     @Test
     public void test2() throws Exception {
+        List<String> wordsSkip = new ArrayList<String>();
+
+        wordsSkip.add("the");
+        wordsSkip.add("an");
+        wordsSkip.add("a");
+
         assertEquals(wordCountConfig.getDelimiter()," ");
+        assertEquals(wordCountConfig.getCaseSensitive(),false);
+        assertEquals(wordCountConfig.getWords().getSkip(),wordsSkip);
     }
 
     @Test
@@ -78,7 +88,7 @@ public class StringsControllerTest2 {
         this.mvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.to", is(2)))
-                .andExpect(jsonPath("$.the", is(2)))
+                .andExpect( jsonPath("$.the").doesNotExist())
                 .andExpect(jsonPath("$.moon", is(2)))
 
         ;
