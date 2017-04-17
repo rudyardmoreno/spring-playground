@@ -14,6 +14,8 @@ import org.springframework.web.client.RestTemplate;
 public class MoviesService {
     private final RestTemplate restTemplate = new RestTemplate();
 
+    public RestTemplate getRestTemplate() { return restTemplate; }
+
     public Movies getMovies(String query) {
         return this.restTemplate.getForObject(
                 "http://www.omdbapi.com/?s={query}",

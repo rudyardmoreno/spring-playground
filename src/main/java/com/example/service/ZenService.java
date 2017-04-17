@@ -13,6 +13,8 @@ import org.springframework.web.client.RestTemplate;
 public class ZenService {
     private final RestTemplate restTemplate = new RestTemplate();
 
+    public RestTemplate getRestTemplate() { return restTemplate; }
+
     public String getMessage() {
         return this.restTemplate.getForObject(
                 "https://api.github.com/zen",
