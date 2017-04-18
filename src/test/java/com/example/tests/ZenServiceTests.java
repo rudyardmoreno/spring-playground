@@ -3,6 +3,7 @@ package com.example.tests;
 import com.example.service.ZenService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -17,6 +18,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ZenService.class)
+@AutoConfigureMockMvc(secure=false)
 public class ZenServiceTests {
 
 	@Test
