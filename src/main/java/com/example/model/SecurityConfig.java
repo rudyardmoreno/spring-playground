@@ -1,5 +1,6 @@
 package com.example.model;
 
+import com.example.service.EmployeeDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -16,6 +17,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    private EmployeeDetailsService employeeDetailsService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
@@ -25,7 +29,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().anyRequest().authenticated();
     }
 
-    @Autowired
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // this line is the one that changes
+        auth.userDetailsService(employeeDetailsService);
+    }
+
+    /*@Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
@@ -34,5 +44,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("boss").password("my-boss-password").roles("MANAGER")
                 .and()
                 .withUser("admin").password("my-admin-password").roles("ADMIN");
-    }
+    }*/
 }

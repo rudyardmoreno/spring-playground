@@ -25,21 +25,33 @@ public class DemoApplication {
 			employee.setId((long) 0);
 			employee.setName("Employee 1");
 			employee.setSalary(24);
+			employee.setUsername("employee1");
+			employee.setPassword("my-employee-password");
+			employee.setRole("EMPLOYEE");
 			employeeRepository.save(employee);
 
 			employee.setId((long) 0);
 			employee.setName("Employee 2");
 			employee.setSalary(22);
+			employee.setUsername("employee2");
+			employee.setPassword("my-employee-password");
+			employee.setRole("EMPLOYEE");
 			employeeRepository.save(employee);
 
 			employee.setId((long)0);
 			employee.setName("Employee 3");
 			employee.setSalary(20);
+			employee.setUsername("employee3");
+			employee.setPassword("my-employee-password");
+			employee.setRole("EMPLOYEE");
 			employeeRepository.save(employee);
 
 			employee.setId((long)0);
 			employee.setName("Employee 4");
 			employee.setSalary(18);
+			employee.setUsername("employee4");
+			employee.setPassword("my-employee-password");
+			employee.setRole("EMPLOYEE");
 			employeeRepository.save(employee);
 		};
 	}
