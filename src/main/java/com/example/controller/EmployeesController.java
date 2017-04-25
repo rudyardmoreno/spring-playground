@@ -1,7 +1,8 @@
 package com.example.controller;
 
+import com.example.model.data.entities.Employee;
+import com.example.model.data.repositories.EmployeeRepository;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,9 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
  * Unit
  */
 @RestController
-@RequestMapping("/employees")
+
 public class EmployeesController {
-    @GetMapping("")
+    private final EmployeeRepository repository;
+
+    public EmployeesController(EmployeeRepository repository) {
+        this.repository = repository;
+    }
+
+    @GetMapping("/admin/employees")
+    public Iterable<Employee> all() {
+        return this.repository.findAll();
+    }
+
+    @GetMapping("/employees")
     public String getEmployees() {
         return "Super secret list of employees";
     }

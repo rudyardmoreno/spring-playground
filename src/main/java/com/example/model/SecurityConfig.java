@@ -21,6 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.httpBasic();
         http.authorizeRequests().mvcMatchers("/flights/**", "/math/**").permitAll();
+        http.authorizeRequests().mvcMatchers("/admin/**").hasAnyRole("ADMIN");
         http.authorizeRequests().anyRequest().authenticated();
     }
 
@@ -30,6 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .inMemoryAuthentication()
                 .withUser("employee").password("my-employee-password").roles("EMPLOYEE")
                 .and()
-                .withUser("boss").password("my-boss-password").roles("MANAGER");
+                .withUser("boss").password("my-boss-password").roles("MANAGER")
+                .and()
+                .withUser("admin").password("my-admin-password").roles("ADMIN");
     }
 }
