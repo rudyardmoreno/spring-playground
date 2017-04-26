@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -17,7 +18,7 @@ public class DemoApplication {
 
 	@Bean
 	@Profile("default")
-	public CommandLineRunner seedData(EmployeeRepository employeeRepository) {
+	public CommandLineRunner seedData(EmployeeRepository employeeRepository, PasswordEncoder passwordEncoder) {
 		return (args) -> {
 			employeeRepository.deleteAll();
 
@@ -25,34 +26,27 @@ public class DemoApplication {
 			employee.setId((long) 0);
 			employee.setName("Employee 1");
 			employee.setSalary(24);
-			employee.setUsername("employee1");
-			employee.setPassword("my-employee-password");
+			employee.setUsername("employee");
+			employee.setPassword(passwordEncoder.encode("my-employee-password"));
 			employee.setRole("EMPLOYEE");
 			employeeRepository.save(employee);
 
 			employee.setId((long) 0);
-			employee.setName("Employee 2");
+			employee.setName("Boss 1");
 			employee.setSalary(22);
-			employee.setUsername("employee2");
-			employee.setPassword("my-employee-password");
-			employee.setRole("EMPLOYEE");
+			employee.setUsername("boss");
+			employee.setPassword(passwordEncoder.encode("my-boss-password"));
+			employee.setRole("MANAGER");
 			employeeRepository.save(employee);
 
 			employee.setId((long)0);
-			employee.setName("Employee 3");
+			employee.setName("Admin 1");
 			employee.setSalary(20);
-			employee.setUsername("employee3");
-			employee.setPassword("my-employee-password");
-			employee.setRole("EMPLOYEE");
+			employee.setUsername("admin");
+			employee.setPassword(passwordEncoder.encode("my-admin-password"));
+			employee.setRole("ADMIN");
 			employeeRepository.save(employee);
 
-			employee.setId((long)0);
-			employee.setName("Employee 4");
-			employee.setSalary(18);
-			employee.setUsername("employee4");
-			employee.setPassword("my-employee-password");
-			employee.setRole("EMPLOYEE");
-			employeeRepository.save(employee);
 		};
 	}
 }
