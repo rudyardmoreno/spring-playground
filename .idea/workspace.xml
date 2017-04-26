@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed0805bb-1572-4e5d-a48f-4f13cbe7c5e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/DemoApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/DemoApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/model/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/SecurityConfig.java" />
-    </list>
+    <list default="true" id="ed0805bb-1572-4e5d-a48f-4f13cbe7c5e2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -1567,7 +1563,7 @@
       <workItem from="1492285790793" duration="7347000" />
       <workItem from="1492422493929" duration="14470000" />
       <workItem from="1492460640457" duration="11998000" />
-      <workItem from="1492798593965" duration="5247000" />
+      <workItem from="1492798593965" duration="5604000" />
     </task>
     <servers />
   </component>
@@ -1604,7 +1600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95051000" />
+    <option name="totallyTimeSpent" value="95408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="6" />
