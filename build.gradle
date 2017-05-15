@@ -31,4 +31,5 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	testCompile('org.springframework.security:spring-security-test')
 	runtime('mysql:mysql-connector-java')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
 }
