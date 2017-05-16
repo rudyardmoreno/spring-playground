@@ -23,6 +23,7 @@ repositories {
 
 
 dependencies {
+	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile 'com.google.code.gson:gson:2.8.0'
@@ -31,5 +32,5 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	testCompile('org.springframework.security:spring-security-test')
 	runtime('mysql:mysql-connector-java')
-	compile('org.springframework.boot:spring-boot-starter-actuator')
+
 }
