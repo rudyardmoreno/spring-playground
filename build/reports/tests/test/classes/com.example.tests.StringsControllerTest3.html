@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.008s</div>
+<div class="counter">0.015s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">66%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,87 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="test3"></a>
-<h3 class="failures">test3</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;401&gt;
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
-	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:664)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
-	at com.example.tests.StringsControllerTest3.test3(StringsControllerTest3.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -153,30 +82,30 @@
 </thead>
 <tr>
 <td class="success">test1</td>
-<td>0.002s</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">test2</td>
-<td>0.002s</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">test3</td>
-<td>0.004s</td>
-<td class="failures">failed</td>
+<td class="success">test3</td>
+<td>0.009s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2017-05-15 15:45:25.508  INFO 6118 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.tests.StringsControllerTest3], using SpringBootContextLoader
-2017-05-15 15:45:25.508  INFO 6118 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.tests.StringsControllerTest3]: no resource found for suffixes {-context.xml, Context.groovy}.
-2017-05-15 15:45:25.508  INFO 6118 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.tests.StringsControllerTest3]: StringsControllerTest3 does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2017-05-15 15:45:25.514  INFO 6118 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.tests.StringsControllerTest3
-2017-05-15 15:45:25.515  INFO 6118 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-05-15 15:45:25.516  INFO 6118 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@63bff600, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a34f0cf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70a8b8d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@579ba316, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b885013, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16676325, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@23bc0f3e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29b58b4c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20b44ea1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@de77fd9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e6144a4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4b0b49cf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4948d749]
+<pre>2017-05-25 11:15:42.873  INFO 54462 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.tests.StringsControllerTest3], using SpringBootContextLoader
+2017-05-25 11:15:42.874  INFO 54462 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.tests.StringsControllerTest3]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-05-25 11:15:42.874  INFO 54462 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.tests.StringsControllerTest3]: StringsControllerTest3 does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-05-25 11:15:42.884  INFO 54462 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.DemoApplication for test class com.example.tests.StringsControllerTest3
+2017-05-25 11:15:42.886  INFO 54462 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-25 11:15:42.888  INFO 54462 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69b180b3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@df7b2a9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@344bb774, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4009dd7d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@255869d7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@158af52f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7c9300fd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72ffd827, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@140f017e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56eead5d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@329ecb95, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3eac1301, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52c4e15b]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -186,108 +115,91 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.2.RELEASE)
 
-2017-05-15 15:45:35.542  INFO 6118 --- [    Test worker] c.example.tests.StringsControllerTest3   : Starting StringsControllerTest3 on trainer18s-MacBook-Pro.local with PID 6118 (started by trainer18 in /Users/trainer18/Documents/git/spring-playground)
-2017-05-15 15:45:35.542  INFO 6118 --- [    Test worker] c.example.tests.StringsControllerTest3   : No active profile set, falling back to default profiles: default
-2017-05-15 15:45:35.544  INFO 6118 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1d86560: startup date [Mon May 15 15:45:35 MDT 2017]; root of context hierarchy
-2017-05-15 15:45:35.742  INFO 6118 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dff3dcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2017-05-15 15:45:35.916  INFO 6118 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-05-15 15:45:35.916  INFO 6118 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2017-05-25 11:15:52.925  INFO 54462 --- [    Test worker] c.example.tests.StringsControllerTest3   : Starting StringsControllerTest3 on trainer18s-MacBook-Pro.local with PID 54462 (started by trainer18 in /Users/trainer18/Documents/git/spring-playground)
+2017-05-25 11:15:52.925  INFO 54462 --- [    Test worker] c.example.tests.StringsControllerTest3   : No active profile set, falling back to default profiles: default
+2017-05-25 11:15:52.927  INFO 54462 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@fd4b704: startup date [Thu May 25 11:15:52 MDT 2017]; root of context hierarchy
+2017-05-25 11:15:53.228  INFO 54462 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94883144] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-05-25 11:15:53.450  INFO 54462 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-25 11:15:53.451  INFO 54462 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2017-05-15 15:45:35.921  INFO 6118 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-05-15 15:45:35.949  INFO 6118 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
-2017-05-15 15:45:36.008  INFO 6118 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
-2017-05-15 15:45:36.009  WARN 6118 --- [    Test worker] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-05-15 15:45:36.009  INFO 6118 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2017-05-15 15:45:36.275  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/admin/employees],methods=[GET]}&quot; onto public java.lang.Iterable&lt;com.example.model.data.entities.Employee&gt; com.example.controller.EmployeesController.all()
-2017-05-15 15:45:36.275  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/me],methods=[GET]}&quot; onto public com.example.model.data.entities.Employee com.example.controller.EmployeesController.getMe(com.example.model.data.entities.Employee)
-2017-05-15 15:45:36.275  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/employees],methods=[GET]}&quot; onto public java.lang.String com.example.controller.EmployeesController.getEmployees()
-2017-05-15 15:45:36.276  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/EndPointController],methods=[GET]}&quot; onto public java.lang.String com.example.controller.EndpointsController.helloWorld()
-2017-05-15 15:45:36.276  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hello]}&quot; onto public java.lang.String com.example.controller.HelloController.helloWorld()
-2017-05-15 15:45:36.276  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights/flight],methods=[GET]}&quot; onto public com.example.model.Flight com.example.controller.JSONController.getMapFlight() throws java.lang.Exception
-2017-05-15 15:45:36.276  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights],methods=[GET]}&quot; onto public java.util.List&lt;com.example.model.Flight&gt; com.example.controller.JSONController.getMapFlights() throws java.lang.Exception
-2017-05-15 15:45:36.276  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights/tickets/total],methods=[POST]}&quot; onto public com.example.model.Result com.example.controller.JSONController.getTicketsTotal(com.example.model.Tickets) throws java.lang.Exception
-2017-05-15 15:45:36.277  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[PATCH]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.update(com.example.model.data.entities.Lesson)
-2017-05-15 15:45:36.277  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[DELETE]}&quot; onto public void com.example.controller.LessonsController.delete(java.lang.Long)
-2017-05-15 15:45:36.277  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons],methods=[POST]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.create(com.example.model.data.entities.Lesson)
-2017-05-15 15:45:36.277  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons],methods=[GET]}&quot; onto public java.lang.Iterable&lt;com.example.model.data.entities.Lesson&gt; com.example.controller.LessonsController.all()
-2017-05-15 15:45:36.278  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[GET]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.getOne(java.lang.Long)
-2017-05-15 15:45:36.278  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/zenservice],methods=[GET]}&quot; onto public java.lang.String com.example.controller.RestTemplateController.getZenService()
-2017-05-15 15:45:36.278  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/movies],methods=[GET]}&quot; onto public java.util.List&lt;com.example.model.Titles&gt; com.example.controller.RestTemplateController.getMovies(java.lang.String)
-2017-05-15 15:45:36.278  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/words/count],methods=[POST]}&quot; onto public java.util.Map&lt;java.lang.String, java.lang.Integer&gt; com.example.controller.StringsController.getWordsCount(java.lang.String)
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[PATCH]}&quot; onto public com.example.model.data.entities.User com.example.controller.UsersController.update(java.lang.Long,com.example.model.data.entities.User)
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[DELETE]}&quot; onto public com.example.controller.UsersController$CCount com.example.controller.UsersController.delete(java.lang.Long)
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users],methods=[POST]}&quot; onto public com.example.model.data.entities.User com.example.controller.UsersController.create(com.example.model.CUser)
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users],methods=[GET]}&quot; onto public com.example.controller.UsersController$CUsers com.example.controller.UsersController.all()
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/authenticate],methods=[POST]}&quot; onto public com.example.controller.UsersController$CAuthenticated com.example.controller.UsersController.getAuthenticate(com.example.model.data.entities.User)
-2017-05-15 15:45:36.279  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[GET]}&quot; onto public com.example.model.CUser com.example.controller.UsersController.getOne(java.lang.Long)
-2017-05-15 15:45:36.280  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/sum],methods=[POST]}&quot; onto public java.lang.String com.example.controller.mathController.sum(org.springframework.util.MultiValueMap&lt;java.lang.String, java.lang.String&gt;)
-2017-05-15 15:45:36.280  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/pi],methods=[GET]}&quot; onto public java.lang.String com.example.controller.mathController.getPI()
-2017-05-15 15:45:36.280  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/volume/{length}/{width}/{height}]}&quot; onto public java.lang.String com.example.controller.mathController.volume(com.example.model.Volume)
-2017-05-15 15:45:36.280  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/area],methods=[POST],consumes=[application/x-www-form-urlencoded]}&quot; onto public java.lang.String com.example.controller.mathController.area(com.example.model.Area)
-2017-05-15 15:45:36.280  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/calculate],methods=[GET]}&quot; onto public java.lang.String com.example.controller.mathController.calculate(com.example.model.Calculate)
-2017-05-15 15:45:36.281  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2017-05-15 15:45:36.282  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2017-05-15 15:45:36.296  INFO 6118 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-05-15 15:45:36.296  INFO 6118 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-05-15 15:45:36.303  INFO 6118 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2017-05-15 15:45:36.343  INFO 6118 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62446833, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ee5a0db, org.springframework.security.web.header.HeaderWriterFilter@f2b482d, org.springframework.security.web.authentication.logout.LogoutFilter@16030ac, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@200bb23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1852968, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@543a7355, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b3727a3, org.springframework.security.web.session.SessionManagementFilter@5ba06b8, org.springframework.security.web.access.ExceptionTranslationFilter@3ed233bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1dafc27b]
-2017-05-15 15:45:36.419  INFO 6118 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
-2017-05-15 15:45:36.419  INFO 6118 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
-2017-05-15 15:45:36.439  INFO 6118 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1d86560: startup date [Mon May 15 15:45:35 MDT 2017]; root of context hierarchy
-2017-05-15 15:45:36.483  INFO 6118 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 64 ms
-2017-05-15 15:45:36.704  INFO 6118 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2017-05-15 15:45:36.975  INFO 6118 --- [    Test worker] c.example.tests.StringsControllerTest3   : Started StringsControllerTest3 in 11.456 seconds (JVM running for 475.0)
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /words/count
-       Parameters = {}
-          Headers = {Content-Type=[text/plain;charset=UTF-8]}
-
-Handler:
-             Type = null
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 401
-    Error message = Full authentication is required to access this resource
-          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY], WWW-Authenticate=[Basic realm=&quot;Realm&quot;]}
-     Content type = null
-             Body = 
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
+2017-05-25 11:15:53.455  INFO 54462 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-25 11:15:53.477  INFO 54462 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-05-25 11:15:53.539  INFO 54462 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-05-25 11:15:53.540  WARN 54462 --- [    Test worker] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-05-25 11:15:53.540  INFO 54462 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-25 11:15:53.852  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/admin/employees],methods=[GET]}&quot; onto public java.lang.Iterable&lt;com.example.model.data.entities.Employee&gt; com.example.controller.EmployeesController.all()
+2017-05-25 11:15:53.852  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/me],methods=[GET]}&quot; onto public com.example.model.data.entities.Employee com.example.controller.EmployeesController.getMe(com.example.model.data.entities.Employee)
+2017-05-25 11:15:53.853  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/employees],methods=[GET]}&quot; onto public java.lang.String com.example.controller.EmployeesController.getEmployees()
+2017-05-25 11:15:53.853  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/EndPointController],methods=[GET]}&quot; onto public java.lang.String com.example.controller.EndpointsController.helloWorld()
+2017-05-25 11:15:53.853  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/hello]}&quot; onto public java.lang.String com.example.controller.HelloController.helloWorld()
+2017-05-25 11:15:53.854  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights/flight],methods=[GET]}&quot; onto public com.example.model.Flight com.example.controller.JSONController.getMapFlight() throws java.lang.Exception
+2017-05-25 11:15:53.854  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights],methods=[GET]}&quot; onto public java.util.List&lt;com.example.model.Flight&gt; com.example.controller.JSONController.getMapFlights() throws java.lang.Exception
+2017-05-25 11:15:53.854  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/flights/tickets/total],methods=[POST]}&quot; onto public com.example.model.Result com.example.controller.JSONController.getTicketsTotal(com.example.model.Tickets) throws java.lang.Exception
+2017-05-25 11:15:53.855  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[PATCH]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.update(com.example.model.data.entities.Lesson)
+2017-05-25 11:15:53.855  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[DELETE]}&quot; onto public void com.example.controller.LessonsController.delete(java.lang.Long)
+2017-05-25 11:15:53.855  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons],methods=[POST]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.create(com.example.model.data.entities.Lesson)
+2017-05-25 11:15:53.855  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons],methods=[GET]}&quot; onto public java.lang.Iterable&lt;com.example.model.data.entities.Lesson&gt; com.example.controller.LessonsController.all()
+2017-05-25 11:15:53.856  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/lessons/{id}],methods=[GET]}&quot; onto public com.example.model.data.entities.Lesson com.example.controller.LessonsController.getOne(java.lang.Long)
+2017-05-25 11:15:53.856  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/zenservice],methods=[GET]}&quot; onto public java.lang.String com.example.controller.RestTemplateController.getZenService()
+2017-05-25 11:15:53.856  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/movies],methods=[GET]}&quot; onto public java.util.List&lt;com.example.model.Titles&gt; com.example.controller.RestTemplateController.getMovies(java.lang.String)
+2017-05-25 11:15:53.856  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/words/count],methods=[POST]}&quot; onto public java.util.Map&lt;java.lang.String, java.lang.Integer&gt; com.example.controller.StringsController.getWordsCount(java.lang.String)
+2017-05-25 11:15:53.860  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[PATCH]}&quot; onto public com.example.model.data.entities.User com.example.controller.UsersController.update(java.lang.Long,com.example.model.data.entities.User)
+2017-05-25 11:15:53.860  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[DELETE]}&quot; onto public com.example.controller.UsersController$CCount com.example.controller.UsersController.delete(java.lang.Long)
+2017-05-25 11:15:53.860  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users],methods=[POST]}&quot; onto public com.example.model.data.entities.User com.example.controller.UsersController.create(com.example.model.CUser)
+2017-05-25 11:15:53.860  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users],methods=[GET]}&quot; onto public com.example.controller.UsersController$CUsers com.example.controller.UsersController.all()
+2017-05-25 11:15:53.861  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/{id}],methods=[GET]}&quot; onto public com.example.model.CUser com.example.controller.UsersController.getOne(java.lang.Long)
+2017-05-25 11:15:53.861  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/users/authenticate],methods=[POST]}&quot; onto public com.example.controller.UsersController$CAuthenticated com.example.controller.UsersController.getAuthenticate(com.example.model.data.entities.User)
+2017-05-25 11:15:53.862  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/sum],methods=[POST]}&quot; onto public java.lang.String com.example.controller.mathController.sum(org.springframework.util.MultiValueMap&lt;java.lang.String, java.lang.String&gt;)
+2017-05-25 11:15:53.862  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/pi],methods=[GET]}&quot; onto public java.lang.String com.example.controller.mathController.getPI()
+2017-05-25 11:15:53.862  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/calculate],methods=[GET]}&quot; onto public java.lang.String com.example.controller.mathController.calculate(com.example.model.Calculate)
+2017-05-25 11:15:53.862  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/volume/{length}/{width}/{height}]}&quot; onto public java.lang.String com.example.controller.mathController.volume(com.example.model.Volume)
+2017-05-25 11:15:53.863  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/math/area],methods=[POST],consumes=[application/x-www-form-urlencoded]}&quot; onto public java.lang.String com.example.controller.mathController.area(com.example.model.Area)
+2017-05-25 11:15:53.864  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-25 11:15:53.864  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-25 11:15:53.891  INFO 54462 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-25 11:15:53.891  INFO 54462 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-25 11:15:53.903  INFO 54462 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-25 11:15:54.022  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.023  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}&quot; onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-05-25 11:15:54.023  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.024  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-05-25 11:15:54.024  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.024  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public org.springframework.http.ResponseEntity&lt;?&gt; org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-05-25 11:15:54.024  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.025  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.025  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-05-25 11:15:54.025  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.026  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-05-25 11:15:54.026  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.027  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.027  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.028  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-05-25 11:15:54.028  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map&lt;java.lang.String, java.lang.String&gt;)
+2017-05-25 11:15:54.028  INFO 54462 --- [    Test worker] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped &quot;{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}&quot; onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-05-25 11:15:54.064  INFO 54462 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dcb5a37, org.springframework.security.web.context.SecurityContextPersistenceFilter@55f614dd, org.springframework.security.web.header.HeaderWriterFilter@de731c6, org.springframework.security.web.authentication.logout.LogoutFilter@42c780f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6119d4ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14193bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@351ceb52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24e9a7de, org.springframework.security.web.session.SessionManagementFilter@726d4fa, org.springframework.security.web.access.ExceptionTranslationFilter@67167ea0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57829c30]
+2017-05-25 11:15:54.160  INFO 54462 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2017-05-25 11:15:54.160  INFO 54462 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2017-05-25 11:15:54.178  INFO 54462 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@fd4b704: startup date [Thu May 25 11:15:52 MDT 2017]; root of context hierarchy
+2017-05-25 11:15:54.209  INFO 54462 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 49 ms
+2017-05-25 11:15:54.463  INFO 54462 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-25 11:15:54.738  INFO 54462 --- [    Test worker] c.example.tests.StringsControllerTest3   : Started StringsControllerTest3 in 11.845 seconds (JVM running for 92.982)
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+<pre>Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Thu May 25 11:15:53 MDT 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 </pre>
 </span>
 </div>
@@ -299,7 +211,7 @@ Mon May 15 15:45:35 MDT 2017 WARN: Establishing SSL connection without server's 
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.4.1</a> at May 15, 2017 3:46:02 PM</p>
+<a href="http://www.gradle.org">Gradle 3.4.1</a> at May 25, 2017 11:16:16 AM</p>
 </div>
 </div>
 </body>
